@@ -1,21 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&display=swap');
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
+/* font class */
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 800 */
 
+.anek-gurmukhi {
+  font-family: "Anek Gurmukhi", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 /* navigation */
 /* logo */
 .navigation {
+    position: relative;
     height: 70px;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
     padding: 0 74px;
     align-items: center;
-
+       z-index: 6;
 }
 
 .logo {
@@ -52,27 +62,38 @@ a:hover {
 
 /* hero section */
 .hero {
+    width: 100%;
     height: 500px;
-    background: url("amzon img/cristian-castillo-73pyV0JJOmE-unsplash.jpg");
-
-    background-position: -1px -348px;
-    background-size: cover;
-    background-repeat: no-repeat;
+   position: relative;
     margin-top: -70px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    overflow: hidden;
 }
 
-.hero h1 {
+.hero img {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: -1;
+    transition: transform 0.5s ease;
+    
+}
+.hero-content {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h1 {
     color: white;
     font-family: "Montserrat", sans-serif;
 }
 
-.hero p {
+.hero-content p {
     color: white;
     font-family: "Anta", sans-serif;
     font-size: 24px;
@@ -120,9 +141,37 @@ h2 {
 /* Gallery */
 .gallery {
     display: flex;
-
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 400px;
+    align-content: center;
 }
 
 .gallery img {
     width: 200px;
+    height: 300px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px 4px;
+   
+}
+.gallery img:hover {
+     transform: scale(1.2,1.2);
+     transition: 0.5s ease;
+}
+.que{
+    border: 1px solid black;
+    padding: 10px;
+    max-width:900px; 
+    font-size: 14px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.que .ans{
+    font-weight: 500;
+    padding: 5px;
+    display: none;
+}
+.q span {
+    float: right;
 }
