@@ -122,15 +122,43 @@ h2 {
     width: 300px;
     height: 500px;
     border: 1px solid black;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: -1px 1px 9px black;
     margin: 10px;
+     padding: 25px;
+     position: relative;
 }
-
+ button{
+    position: absolute;
+    bottom: 40px;
+    left: 30%;
+    width: 100px;
+    height: 30px;
+    background: #f8c334;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background: #fcba07;
+    box-shadow: 0px 0px 3px 1px black;
+}
+.box h2{
+    color: rgb(78, 184, 226);
+}
+ul {
+    padding: 20px;
+    list-style-type: ;
+}
+ul li{
+    margin: 3px;
+}
 /* about us */
 .about-us {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 0 10px 30px;
+    background-color: #eae4e4;
 }
 
 .about-us p {
@@ -217,5 +245,11 @@ footer{
         width:200px;
         font-size: 16px;
     }
-    
+    .gallery img{
+        width: 135px;
+        height: 200px;
+    }
+    .about-us p{
+        font-size: 14px;
+    }
 }
